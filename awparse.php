@@ -59,7 +59,9 @@ echo $stats->getFileContents();
  */
 abstract class AwstatsFile
 {
-	protected $data = array();
+	// this should be protected but because of a bug in PHP 5.1
+	//  it is set to public
+	public $data = array();
 
 	public function getFileContents()
 	{
